@@ -5,12 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class Rocket : MonoBehaviour {
 
-
     [SerializeField] float rocketRotation = 100f;
     [SerializeField] float rocketThrust = 100f;
+
     [SerializeField] AudioClip mainEngine;
     [SerializeField] AudioClip success;
     [SerializeField] AudioClip death;
+
+    [SerializeField] ParticleSystem mainEngineParticles;
+    [SerializeField] ParticleSystem successParticles;
+    [SerializeField] ParticleSystem deathParticles;
 
     Rigidbody rigidBody;
     AudioSource audioSource;
@@ -19,14 +23,15 @@ public class Rocket : MonoBehaviour {
     State state = State.Alive;
 
     // Use this for initialization
-    void Start () {
+    void Start ()
+    {
         rigidBody = GetComponent<Rigidbody>();
-        audioSource = GetComponent<AudioSource>();
-        
+        audioSource = GetComponent<AudioSource>();     
     }
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
         if (state == State.Alive)
         {
         RespondToThrustInput();
@@ -42,8 +47,8 @@ public class Rocket : MonoBehaviour {
         }
         else
         {
-            audioSource.clip = mainEngine;
-            audioSource.Pause();
+            audioSource.Stop();
+            mainEngineParticles.Stop();
         }
     }
 
@@ -54,6 +59,7 @@ public class Rocket : MonoBehaviour {
         {
             audioSource.PlayOneShot(mainEngine);
         }
+        mainEngineParticles.Play();
     }
 
     private void RespondToRotationInput()
@@ -96,6 +102,7 @@ public class Rocket : MonoBehaviour {
     private void StartSuccessSequence()
     {
         state = State.Transcending;
+        successParticles.Play();
         Invoke("LoadNextLevel", 2f);
         audioSource.Stop();
         audioSource.PlayOneShot(success);
@@ -104,6 +111,7 @@ public class Rocket : MonoBehaviour {
     private void StartDeathSequence()
     {
         state = State.Dying;
+        deathParticles.Play();
         Invoke("LoadFirstLevel", 2f);
         audioSource.Stop();
         audioSource.PlayOneShot(death);
