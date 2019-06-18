@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 65028474675465800}
   - component: {fileID: 23736617041849692}
   m_Layer: 0
-  m_Name: Rockey Body (1)
+  m_Name: Rockey Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -147,7 +147,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1710354556008638}
   m_LocalRotation: {x: -0, y: -0, z: 0.0009162227, w: 0.99999964}
-  m_LocalPosition: {x: 0, y: 2.18, z: 0}
+  m_LocalPosition: {x: -22.83, y: 6.64, z: -2.87}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4542512152914268}
@@ -406,11 +406,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c9e1ee09680f84c4c91f6a007b170474, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.58
+  m_Volume: 1
   m_Pitch: 0.61
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -446,7 +446,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 2
       time: 0
-      value: 1
+      value: 0.47
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -490,3 +490,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rocketRotation: 100
   rocketThrust: 100
+  mainEngine: {fileID: 8300000, guid: d22a7a62e89354943ad4c45ed1a68980, type: 3}
+  levelBegin: {fileID: 8300000, guid: 91782257d4bd6934689050e0181876ac, type: 3}
+  death: {fileID: 0}
