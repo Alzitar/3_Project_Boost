@@ -210,13 +210,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1676217774953718}
-  m_LocalRotation: {x: 0.75105983, y: -0, z: -0, w: 0.6602343}
-  m_LocalPosition: {x: 0, y: -1.5, z: -0.27}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: -1.68, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4630457834657174}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 97.36401, y: -0.000015258789, z: -0.000015258789}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4630457834657174
 Transform:
   m_ObjectHideFlags: 1
@@ -243,13 +243,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1749383570775104}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 6.150197, y: 3.1, z: -12.432644}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4630457834657174}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4883063840742000
 Transform:
   m_ObjectHideFlags: 1
@@ -581,8 +581,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b3f74728a2c92547af2783ec05830c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rocketRotation: 100
+  rocketRotation: 150
   rocketThrust: 100
+  levelLoadDelay: 2
   mainEngine: {fileID: 8300000, guid: d22a7a62e89354943ad4c45ed1a68980, type: 3}
   success: {fileID: 8300000, guid: 91782257d4bd6934689050e0181876ac, type: 3}
   death: {fileID: 8300000, guid: c59b1c4fdeb28c44b8e134b083d99e84, type: 3}
